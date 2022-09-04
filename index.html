@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTC bus routing | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div>Follow us on</div>
+
+        <div>
+            <a href="https://www.instagram.com/" target="_blank"><img src="instalogo.jpg" alt="insta" width="20px"></a>
+            &nbsp; <a href="https://www.twitter.com/" target="_blank"><img src="twitterlogo.png" alt="twitter"
+                    width="30px"></a>
+            &nbsp; <a href="https://www.facebook.com/" target="_blank"><img src="Fblogo.png" alt="fb" width="20px"></a>
+        </div>
+    </header>
+    <!-- nav bar -->
+    <nav>
+        <div class="col-1">
+            <div class="col-1-items"> <img src="DTClogo.png" alt="dtc logo" width="80px"> </div>
+            <div class="col-1-items" id="hideItem"> Delhi Transport <br> Corporation </div>
+        </div>
+        <div class="col-2">
+            <div class="col-2-items"><button class="btn" id="login">Login</button> &nbsp;&nbsp;<button class="btn"
+                    id="register">Registration</button></div>
+            <div> <a href="#" id="home">Home</a> &nbsp;&nbsp;
+                <a href="#" id="help"> Help&Contact</a> &nbsp;&nbsp;
+                <a href="#" id="review">Review</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- main section -->
+    <main>
+        <div class="main-item-1">
+            <video src="v.mp4" autoplay loop width="550" height="540px"></video>
+
+
+        </div>
+        <div id="main-item-2">
+            <!-- content home page-->
+            <div id="main-content-1">Plan Your journery</div>
+            <div>
+                From <br>
+                <select name="from" id="from" onChange="update()">
+                    <option value="">Select a source location</option>
+                    <option value="Adarsh Nagar">Pitampura</option>
+                    <option value="Stop1">Nehru Place</option>
+                    <option value="Stop2">Uttam Nagar</option>
+                    <option value="Stop3">Subhash Palace</option>
+                    <option value="Stop4">Kashmere Gate</option>
+                    <option value="Stop5">Sarai Kale Khan</option>
+
+
+
+                </select>
+                <br>
+                <br> To <br>
+                <select name="to" id="to" onChange="update()">
+                    <option value="">Select a destination location</option>
+                    <option value="Pitampura">Pitampura</option>
+                    <option value="dStop 1">Nehru Place</option>
+                    <option value="dStop2">Uttam Nagar</option>
+                    <option value="dStop3">Subhash Palace</option>
+                    <option value="dStop4">Kashmere Gate</option>
+                    <option value="dStop5">Sarai Kale Khan</option>
+                </select>
+            </div>
+
+
+            <div>
+                <button id="showRoute" class="btn2">SHOW</button>
+            </div>
+        </div>
+        <!--content login page  -->
+        <div id="loginContent">
+            <div>
+                <form action="#">
+                    <label for="username">Username*</label> <br>
+                    <input type="email" name="email" id="email" placeholder="Enter your email id" required>
+                    <br> <br> <label for="password">Password*</label> <br>
+                    <input type="password" name="pass" id="pass" placeholder="Enter your password" required>
+            </div> <br>
+
+            <div> <a href="#" id="shiftRight">Forgot Password?</a> </div> <br><br>
+            <span><button type="submit" class="btn">LOGIN</button></span>
+            </form>
+
+            <span> <a href="#" id="notamember">Not a member?</a> </span>
+        </div>
+
+        <!-- registration page -->
+        <div id="registerContent">
+            <div>
+                <form action="#">
+                    <label for="name"> Name*</label> <br> <input type="text" name="name" id="name" required
+                        placeholder="username"> <br><br>
+                    <label for="email"> Email Address*</label> <br> <input type="email" name="emailID" id="emailID"
+                        required placeholder="email id"><br> <br>
+                    <label for="pnumber"> Phone number*</label> <br> <input type="number" name="contactNumber"
+                        id="contactNumber" required placeholder="phone number"> <br><br>
+                    <label for="pass"> Password*</label> <br> <input type="password" name="password" id="password"
+                        required placeholder="password"> <br><br>
+                    <label for="cpass"> Confirm Password*</label> <br> <input type="password" name="cpass" id="cpass"
+                        required placeholder="re-enter password"><br> <br>
+
+                    <button type="submit" class="btn2">REGISTER</button>
+                </form>
+            </div>
+        </div>
+        <!-- show route -->
+        <div id="Route">
+            <br> <i style="color: rgb(215, 3, 3);font-size: xx-large;text-decoration: underline;">Recommended Route</i> <br> <br> 
+            <div id="RouteDetails"></div>
+        </div>
+        <!-- help and contact page -->
+        <div id="helpContent">
+            <span>
+
+                Disaster helpline: 1098<br> <br>
+                Child helpline: 1077<br> <br>
+                Women helpline: 1091 <br> <br>
+                Police: 100 <br> <br>
+                Fire and rescue: 101 <br> <br>
+                Ambulance: 102 <br> <br>
+
+            </span>
+            <p> DTC Control Room: 011-2331 7600 <br> <br>
+                DTC Control Room: 011-4140 0400</p>
+        </div>
+    </main>
+
+<!-- linked javascript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
+

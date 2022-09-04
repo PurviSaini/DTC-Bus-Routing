@@ -1,0 +1,339 @@
+
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-image: url("map.png");
+  background-position: center;
+  background-size: cover;
+}
+
+:root {
+  --colour: rgb(215, 3, 3);
+}
+
+/* header */
+header {
+  display: flex;
+  border: solid silver 1px;
+  padding: 6px;
+  flex-wrap: wrap;
+}
+
+header div {
+  margin-left: 10px;
+}
+
+/* nav bar */
+nav {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: solid silver 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgb(234, 233, 233);
+}
+
+nav .col-1 {
+  color: var(--colour);
+  padding-top: 12px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+nav .col-2 {
+  margin-right: 15px;
+  text-align: end;
+}
+
+nav .col-2-items {
+  margin-bottom: 10px;
+}
+
+.col-2 a:hover {
+  text-decoration: underline;
+}
+
+#home {
+  color: var(--colour);
+}
+
+/* main-section */
+main {
+  display: flex;
+}
+
+#main-item-2 {
+  margin: 0 auto;
+  border: silver 2px solid;
+  margin-top: 0.3%;
+  font-size: xx-large;
+  display: flex;
+  padding: 16px 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 10px black;
+}
+
+#main-content-1,
+#show {
+  color: white;
+  padding: 10px 30px;
+  border-radius: 8px;
+  background-color: var(--colour);
+}
+
+main #show {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+main select {
+  color: var(--colour);
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-size: x-large;
+}
+
+/* login page */
+#loginContent {
+  display: none;
+  margin: 0 auto;
+  margin-top: 0.5%;
+  border: silver 2px solid;
+  padding: 16px 20px;
+  box-shadow: 0 0 10px black;
+  font-size: xx-large;
+}
+
+#loginContent input {
+  color: var(--colour);
+  border-radius: 20px;
+  padding: 6px 20px;
+
+  font-size: x-large;
+}
+
+#loginContent button {
+  background-color: var(--colour);
+  color: white;
+  font-size: x-large;
+}
+
+#shiftRight {
+  margin-left: 200px;
+}
+
+#notamember {
+  color: var(--colour);
+  text-decoration: underline;
+  margin-left: 120px;
+}
+
+/* registration */
+#registerContent {
+  display: none;
+  font-size: large;
+  margin: 0 auto;
+  margin-top: 0.5%;
+  padding: 16px 30px;
+  box-shadow: 0 0 10px black;
+
+  border: silver 2px solid;
+}
+
+#registerContent input {
+  color: var(--colour);
+  border-radius: 20px;
+  padding: 5px 20px;
+  font-size: large;
+}
+
+/* help and contact */
+#helpContent {
+  display: none;
+  margin-left: 15%;
+  margin-top: 5%;
+  font-size: 1.4rem;
+}
+
+#helpContent p {
+  font-weight: bold;
+}
+
+/* show route */
+#Route {
+  text-align: center;
+  display: none;
+  margin-left: 4%;
+  margin-right: 2%;
+  margin-top: 4%;
+  font-size: x-large;
+}
+#RouteDetails {
+  margin-top: 7%;
+}
+/* utility */
+.btn {
+  padding: 5px 8px;
+  border: var(--colour) solid 2px;
+  border-radius: 10px;
+  font-size: large;
+  background-color: rgb(234, 233, 233);
+  color: var(--colour);
+}
+
+.btn:hover {
+  background-color: var(--colour);
+  color: white;
+}
+
+.btn2 {
+  color: white;
+  padding: 10px 30px;
+  border-radius: 8px;
+  background-color: var(--colour);
+  font-size: x-large;
+  border: 0px;
+}
+
+/* media queries */
+@media screen and (min-width: 1205px) {
+  main {
+    margin: 5% 5%;
+  }
+}
+
+@media screen and (max-width: 1205px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main video {
+    margin: 10% 0;
+  }
+
+  #main-item-2 {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  nav .col-2,
+  nav .col-1 {
+    font-size: small;
+  }
+
+  main video {
+    width: 100%;
+    height: auto;
+  }
+
+  #loginContent {
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  nav .col-2-items,
+  .col-1-items {
+    font-size: smaller;
+  }
+
+  .btn {
+    font-size: smaller;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #loginContent button {
+    font-size: small;
+  }
+
+  #loginContent,
+  #registerContent input,
+  #loginContent input,
+  #main-item-2,
+  #main-item-2 select,
+  .btn2 {
+    font-size: small;
+    width: 100%;
+    height: auto;
+  }
+
+  #main-item-2 {
+    height: 300px;
+  }
+
+  #shiftRight {
+    margin-left: 100px;
+  }
+
+  #notamember {
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1721px) {
+  #main-item-2,
+  #loginContent,
+  #registerContent {
+    width: 900px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  /* nav bar */
+  nav .col-1 {
+    grid-template-columns: 0px 1fr;
+  }
+
+  #hideItem {
+    color: rgba(240, 248, 255, 0);
+  }
+
+  nav img {
+    max-width: 50px;
+  }
+
+  nav {
+    grid-template-columns: 1fr 4fr;
+  }
+  #Route {
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 344px) {
+  .col-1 img,
+  .col-1 {
+    width: 0px;
+    height: 0px;
+  }
+
+  .col-2 {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .col-2-items {
+    text-align: center;
+  }
+
+  nav {
+    grid-template-columns: 1fr;
+  }
+  #Route {
+    font-size: medium;
+  }
+}
